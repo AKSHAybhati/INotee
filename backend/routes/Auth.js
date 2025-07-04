@@ -22,10 +22,10 @@ router.post("/signup", async (req, res) => {
 
     const data = { user: { id: user.id } };
     const token = jwt.sign({ user }, process.env.JWT_SECRET);
-    res.json({ token });
+    res.json({ success: true, token });
   } catch (error) {
     console.error(error.message);
-    res.status(500).send("Server Error");
+    res.status(500).json({ success: false, error: "Internal Server Error" });
   }
 });
 
@@ -42,12 +42,12 @@ router.post("/login", async (req, res) => {
     if (!isMatch) return success=false, res.status(400).json({ success ,error: "Invalid credentials" });
 
     const data = { user: { id: user.id } };
-    const token = jwt.sign(data, JWT_SECRET);
+    const token = jwt.sign(data, process.env.JWT_SECRET);
     success=true
     res.json({success,token });
   } catch (error) {
     console.error(error.message);
-    res.status(500).send("Server Error");
+    res.status(500).json({ success: false, error: "Internal Server Error" });
   }
 });
 
