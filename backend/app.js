@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGO_URL, {
 .catch((err) => console.error("MongoDB connection error:", err));
 
 app.use(cors({
-    origin: "https://i-notee.vercel.app/", 
+    origin: "https://i-notee.vercel.app", 
   credentials: true
 }));
 app.use(express.json());
