@@ -1,0 +1,25 @@
+i{
+    cursor: pointer;
+}
+
+.dark-background {
+  background-color: #0f172a;
+  min-height: 100vh;
+  color: white;
+}
+
+.dark-background .form-label {
+  color: #d1d5db; /* Light gray for labels */
+}
+
+.dark-background .form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.dark-background .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 0.2rem rgba(139, 92, 246, 0.25);
+}
