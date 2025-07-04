@@ -9,7 +9,7 @@ const Login = () => {
 
     const handleSubmit =async(e)=>{
         e.preventDefault()
-      const response = await fetch("https://inotee.onrender.com//api/auth/login",{
+      const response = await fetch("https://inotee.onrender.com/api/auth/login",{
       method:"POST", 
       headers:{
         "content-type":"application/json"

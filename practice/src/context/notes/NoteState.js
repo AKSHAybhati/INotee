@@ -8,7 +8,7 @@ const NoteState = (props) => {
   //  Get All Notes
   const getNotes = async () => {
     const response = await fetch(`${host}/api/fetchallNotes`, {
-      method: "GET",
+      method: "GET",  
       headers: {
         "Content-Type": "application/json",
         "auth-token": localStorage.getItem("token"),
